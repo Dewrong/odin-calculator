@@ -70,8 +70,7 @@ const operate = function(inputOperator){
     second = "";
     return;
     }
-    if(operator != "" && inputOperator != "="){
-        debugger
+    if(operator != "" && inputOperator != "="){        
         document.getElementById("history").innerHTML += "Error: Can only evaluate one operation at a time."
         clearInput();
     }
