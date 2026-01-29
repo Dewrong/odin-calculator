@@ -8,27 +8,30 @@
     <span>Here's a calculator in the console for now, adding non-functional buttons.</span>
     <div class="calculator">
         <div class="input-display">
-            <div class="history">8 + 4 = 12</div>
-            <div class="current">12+4</div>
+            <div class="history" id="history"></div>
+            <div class="current" id="current-numbers"></div>
         </div>
         <div class="numeric buttons">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>0</button>
+            <button value="1" onclick="typeToCurrent(this.value)">1</button>
+            <button value="2" onclick="typeToCurrent(this.value)">2</button>
+            <button value="3" onclick="typeToCurrent(this.value)">3</button>
+            <button value="4" onclick="typeToCurrent(this.value)">4</button>
+            <button value="5" onclick="typeToCurrent(this.value)">5</button>
+            <button value="6" onclick="typeToCurrent(this.value)">6</button>
+            <button value="7" onclick="typeToCurrent(this.value)">7</button>
+            <button value="8" onclick="typeToCurrent(this.value)">8</button>
+            <button value="9" onclick="typeToCurrent(this.value)">9</button>
+            <button value="0" onclick="typeToCurrent(this.value)">0</button>
         </div>
         <div class="operator buttons">
-            <button>+</button>
-            <button>-</button>
-            <button>/</button>
-            <button>*</button>
-            <button>=</button>
+            <button value="+" onclick="operate(this.value)">+</button>
+            <button value="-" onclick="operate(this.value)">-</button>
+            <button value="/" onclick="operate(this.value)">/</button>
+            <button value="*" onclick="operate(this.value)">*</button>
+            <button value="=" onclick="operate(this.value)">=</button>
+        </div>
+        <div>
+            <button value="CE" onclick="clearInput()">CE</button>
         </div>
     </div>
 </body>
