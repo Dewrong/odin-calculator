@@ -22,7 +22,10 @@ const multiply = function(){
 }
 
 const divide = function(){
-    
+    if(second == "0"){
+        let total = "Undefined."
+        return total;
+    }
     let total = first/second;
     return total;
 }
@@ -45,7 +48,7 @@ const operate = function(inputOperator){
         let secondIndex = document.getElementById("current-numbers").innerHTML.indexOf(operator);
         second = document.getElementById("current-numbers").innerHTML.slice(secondIndex+1);
         second = parseInt(second);
-        console.log(operator);
+
         switch(operator){
             case '+':
                 total = add(first, second);
@@ -63,7 +66,7 @@ const operate = function(inputOperator){
                 console.log("that didn't work");
         }
         document.getElementById("history").innerHTML += `\n${first}${operator}${second} = ${total}\n`;
-        console.log(`${first} ${operator} ${second} = ${total}`);
+        
         document.getElementById("current-numbers").innerHTML = "";
     operator = "";
     first = "";
